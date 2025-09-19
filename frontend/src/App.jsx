@@ -20,6 +20,12 @@ import About from './pages/About'
 // Admin Pages
 import AdminLogin from './pages/admin/Login'
 import AdminDashboard from './pages/admin/Dashboard'
+import AdminCourses from './pages/admin/Courses'
+import AdminToppers from './pages/admin/Toppers'
+import AdminAchievements from './pages/admin/Achievements'
+import AdminGallery from './pages/admin/Gallery'
+import AdminContacts from './pages/admin/Contacts'
+import AdminHomeContent from './pages/admin/HomeContent'
 
 function App() {
   return (
@@ -52,12 +58,12 @@ function App() {
             </ProtectedRoute>
           }>
             <Route path="dashboard" element={<AdminDashboard />} />
-            <Route path="courses" element={<div className="p-8 text-center text-gray-500">Courses management coming soon...</div>} />
-            <Route path="toppers" element={<div className="p-8 text-center text-gray-500">Toppers management coming soon...</div>} />
-            <Route path="achievements" element={<div className="p-8 text-center text-gray-500">Achievements management coming soon...</div>} />
-            <Route path="gallery" element={<div className="p-8 text-center text-gray-500">Gallery management coming soon...</div>} />
-            <Route path="contacts" element={<div className="p-8 text-center text-gray-500">Contacts management coming soon...</div>} />
-            <Route path="home" element={<div className="p-8 text-center text-gray-500">Home content management coming soon...</div>} />
+            <Route path="courses" element={<AdminCourses />} />
+            <Route path="toppers" element={<AdminToppers />} />
+            <Route path="achievements" element={<AdminAchievements />} />
+            <Route path="gallery" element={<AdminGallery />} />
+            <Route path="contacts" element={<AdminContacts />} />
+            <Route path="home" element={<AdminHomeContent />} />
           </Route>
         </Routes>
       </ApiProvider>
