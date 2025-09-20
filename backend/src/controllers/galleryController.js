@@ -91,6 +91,15 @@ const createGalleryItem = async (req, res) => {
 
     const itemData = req.body;
     
+    // Parse JSON fields from FormData
+    if (itemData.tags && typeof itemData.tags === 'string') {
+      try {
+        itemData.tags = JSON.parse(itemData.tags);
+      } catch (error) {
+        itemData.tags = [];
+      }
+    }
+    
     // Handle image upload
     if (req.file) {
       itemData.image = req.file.path;
@@ -135,6 +144,15 @@ const updateGalleryItem = async (req, res) => {
     }
 
     const updateData = req.body;
+
+    // Parse JSON fields from FormData
+    if (updateData.tags && typeof updateData.tags === 'string') {
+      try {
+        updateData.tags = JSON.parse(updateData.tags);
+      } catch (error) {
+        updateData.tags = [];
+      }
+    }
 
     // Handle image upload
     if (req.file) {

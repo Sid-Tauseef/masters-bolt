@@ -91,6 +91,15 @@ const createAchievement = async (req, res) => {
 
     const achievementData = req.body;
     
+    // Parse JSON fields from FormData
+    if (achievementData.relatedStudents && typeof achievementData.relatedStudents === 'string') {
+      try {
+        achievementData.relatedStudents = JSON.parse(achievementData.relatedStudents);
+      } catch (error) {
+        achievementData.relatedStudents = [];
+      }
+    }
+    
     // Handle image upload
     if (req.file) {
       achievementData.image = req.file.path;
@@ -135,6 +144,15 @@ const updateAchievement = async (req, res) => {
     }
 
     const updateData = req.body;
+
+    // Parse JSON fields from FormData
+    if (updateData.relatedStudents && typeof updateData.relatedStudents === 'string') {
+      try {
+        updateData.relatedStudents = JSON.parse(updateData.relatedStudents);
+      } catch (error) {
+        updateData.relatedStudents = [];
+      }
+    }
 
     // Handle image upload
     if (req.file) {

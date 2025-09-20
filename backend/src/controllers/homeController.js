@@ -70,7 +70,41 @@ const createHomeSection = async (req, res) => {
       });
     }
 
+    // Check if section already exists
+    const existingSection = await Home.findOne({ section: req.body.section });
+    if (existingSection) {
+      return res.status(400).json({
+        success: false,
+        message: 'Section already exists. Use update instead.'
+      });
+    }
+
     const sectionData = req.body;
+    
+    // Parse JSON fields from FormData
+    if (sectionData.stats && typeof sectionData.stats === 'string') {
+      try {
+        sectionData.stats = JSON.parse(sectionData.stats);
+      } catch (error) {
+        sectionData.stats = [];
+      }
+    }
+    
+    if (sectionData.testimonials && typeof sectionData.testimonials === 'string') {
+      try {
+        sectionData.testimonials = JSON.parse(sectionData.testimonials);
+      } catch (error) {
+        sectionData.testimonials = [];
+      }
+    }
+    
+    if (sectionData.announcements && typeof sectionData.announcements === 'string') {
+      try {
+        sectionData.announcements = JSON.parse(sectionData.announcements);
+      } catch (error) {
+        sectionData.announcements = [];
+      }
+    }
     
     // Handle image upload
     if (req.file) {
@@ -116,6 +150,31 @@ const updateHomeSection = async (req, res) => {
     }
 
     const updateData = req.body;
+
+    // Parse JSON fields from FormData
+    if (updateData.stats && typeof updateData.stats === 'string') {
+      try {
+        updateData.stats = JSON.parse(updateData.stats);
+      } catch (error) {
+        updateData.stats = [];
+      }
+    }
+    
+    if (updateData.testimonials && typeof updateData.testimonials === 'string') {
+      try {
+        updateData.testimonials = JSON.parse(updateData.testimonials);
+      } catch (error) {
+        updateData.testimonials = [];
+      }
+    }
+    
+    if (updateData.announcements && typeof updateData.announcements === 'string') {
+      try {
+        updateData.announcements = JSON.parse(updateData.announcements);
+      } catch (error) {
+        updateData.announcements = [];
+      }
+    }
 
     // Handle image upload
     if (req.file) {

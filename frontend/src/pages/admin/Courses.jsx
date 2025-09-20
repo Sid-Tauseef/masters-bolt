@@ -74,10 +74,18 @@ const Courses = () => {
       
       // Append all form fields
       Object.keys(data).forEach(key => {
-        if (key === 'features' || key === 'syllabus') {
-          formData.append(key, JSON.stringify(data[key]))
+        if (key === 'features') {
+          // Handle features array
+          const features = data[key] ? data[key].split(',').map(f => f.trim()).filter(f => f) : []
+          formData.append(key, JSON.stringify(features))
         } else if (key === 'instructor') {
-          formData.append(key, JSON.stringify(data[key]))
+          // Handle instructor object
+          const instructor = {
+            name: data['instructor.name'] || '',
+            qualification: data['instructor.qualification'] || '',
+            experience: data['instructor.experience'] || ''
+          }
+          formData.append(key, JSON.stringify(instructor))
         } else if (key !== 'image') {
           formData.append(key, data[key])
         }

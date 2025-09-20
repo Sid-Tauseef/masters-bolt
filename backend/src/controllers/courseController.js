@@ -95,6 +95,31 @@ const createCourse = async (req, res) => {
 
     const courseData = req.body;
     
+    // Parse JSON fields from FormData
+    if (courseData.features && typeof courseData.features === 'string') {
+      try {
+        courseData.features = JSON.parse(courseData.features);
+      } catch (error) {
+        courseData.features = [];
+      }
+    }
+    
+    if (courseData.syllabus && typeof courseData.syllabus === 'string') {
+      try {
+        courseData.syllabus = JSON.parse(courseData.syllabus);
+      } catch (error) {
+        courseData.syllabus = [];
+      }
+    }
+    
+    if (courseData.instructor && typeof courseData.instructor === 'string') {
+      try {
+        courseData.instructor = JSON.parse(courseData.instructor);
+      } catch (error) {
+        courseData.instructor = {};
+      }
+    }
+    
     // Handle image upload
     if (req.file) {
       courseData.image = req.file.path;
@@ -139,6 +164,31 @@ const updateCourse = async (req, res) => {
     }
 
     const updateData = req.body;
+
+    // Parse JSON fields from FormData
+    if (updateData.features && typeof updateData.features === 'string') {
+      try {
+        updateData.features = JSON.parse(updateData.features);
+      } catch (error) {
+        updateData.features = [];
+      }
+    }
+    
+    if (updateData.syllabus && typeof updateData.syllabus === 'string') {
+      try {
+        updateData.syllabus = JSON.parse(updateData.syllabus);
+      } catch (error) {
+        updateData.syllabus = [];
+      }
+    }
+    
+    if (updateData.instructor && typeof updateData.instructor === 'string') {
+      try {
+        updateData.instructor = JSON.parse(updateData.instructor);
+      } catch (error) {
+        updateData.instructor = {};
+      }
+    }
 
     // Handle image upload
     if (req.file) {
