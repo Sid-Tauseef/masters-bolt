@@ -1,4 +1,4 @@
-# Radiance Academy Website
+# Masters Academy Website
 
 A modern educational academy website built with React frontend and Node.js/MongoDB backend.
 

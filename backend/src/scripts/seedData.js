@@ -44,9 +44,9 @@ const seedHomeData = async () => {
     const homeSections = [
       {
         section: 'hero',
-        title: 'Welcome to Radiance Academy',
+        title: 'Welcome to Masters Academy',
         subtitle: 'Illuminating Minds, Shaping Futures',
-        content: 'At Radiance Academy, we are committed to providing quality education that empowers students to achieve their dreams and excel in their chosen fields.',
+        content: 'At Masters Academy, we are committed to providing quality education that empowers students to achieve their dreams and excel in their chosen fields.',
         image: 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg',
         buttonText: 'Explore Courses',
         buttonLink: '/courses',
@@ -55,8 +55,8 @@ const seedHomeData = async () => {
       },
       {
         section: 'about',
-        title: 'About Radiance Academy',
-        content: 'Radiance Academy has been a beacon of educational excellence for over a decade. We specialize in competitive exam preparation, academic support, and skill development programs that prepare students for success in their academic and professional journeys.',
+        title: 'About Masters Academy',
+        content: 'Masters Academy has been a beacon of educational excellence for over a decade. We specialize in competitive exam preparation, academic support, and skill development programs that prepare students for success in their academic and professional journeys.',
         image: 'https://images.pexels.com/photos/5212700/pexels-photo-5212700.jpeg',
         isActive: true,
         order: 2
@@ -182,7 +182,7 @@ const seedToppers = async () => {
         score: '324/360',
         rank: 'AIR 15',
         course: 'JEE Main & Advanced',
-        testimonial: 'Radiance Academy provided me with the perfect environment and guidance to achieve my dream of getting into IIT.',
+        testimonial: 'Masters Academy provided me with the perfect environment and guidance to achieve my dream of getting into IIT.',
         featured: true
       },
       {
@@ -194,7 +194,7 @@ const seedToppers = async () => {
         score: '695/720',
         rank: 'AIR 25',
         course: 'NEET Preparation',
-        testimonial: 'The faculty at Radiance Academy helped me understand complex concepts easily and build confidence.',
+        testimonial: 'The faculty at Masters Academy helped me understand complex concepts easily and build confidence.',
         featured: true
       },
       {

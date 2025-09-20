@@ -14,9 +14,12 @@ const Hero = ({ data }) => {
     <section className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
       </div>
 
       <div className="container-custom relative z-10">
@@ -45,7 +48,7 @@ const Hero = ({ data }) => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gray-900 leading-tight"
               >
-                {data?.title || 'Welcome to Radiance Academy'}
+                {data?.title || 'Welcome to Masters Academy'}
               </motion.h1>
 
               <motion.p
@@ -63,7 +66,8 @@ const Hero = ({ data }) => {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="text-lg text-gray-600 leading-relaxed max-w-2xl"
               >
-                {data?.content || 'At Radiance Academy, we are committed to providing quality education that empowers students to achieve their dreams and excel in their chosen fields.'}
+                {data?.content ||
+                  'At Masters Academy, we are committed to providing quality education that empowers students to achieve their dreams and excel in their chosen fields.'}
               </motion.p>
             </div>
 
@@ -110,7 +114,7 @@ const Hero = ({ data }) => {
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Image */}
@@ -122,11 +126,14 @@ const Hero = ({ data }) => {
           >
             <div className="relative z-10">
               <img
-                src={data?.image || 'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=800'}
+                src={
+                  data?.image ||
+                  'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=800'
+                }
                 alt="Students studying"
                 className="w-full h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl"
               />
-              
+
               {/* Floating Cards */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -139,7 +146,9 @@ const Hero = ({ data }) => {
                     <Trophy className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">95% Success Rate</div>
+                    <div className="text-sm font-semibold text-gray-900">
+                      95% Success Rate
+                    </div>
                     <div className="text-xs text-gray-500">In Competitive Exams</div>
                   </div>
                 </div>
@@ -156,7 +165,9 @@ const Hero = ({ data }) => {
                     <Users className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">5000+ Students</div>
+                    <div className="text-sm font-semibold text-gray-900">
+                      5000+ Students
+                    </div>
                     <div className="text-xs text-gray-500">Trust Our Teaching</div>
                   </div>
                 </div>

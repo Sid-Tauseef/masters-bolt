@@ -200,7 +200,7 @@ const Contact = () => {
                   </h3>
                   <p className="text-gray-600 mb-4">
                     Come and experience our state-of-the-art facilities, meet our faculty, 
-                    and get a feel for the Radiance Academy environment.
+                    and get a feel for the Masters Academy environment.
                   </p>
                   <button className="btn-outline w-full">
                     Get Directions

@@ -1,7 +1,7 @@
 {
   "name": "radiance-academy-backend",
   "version": "1.0.0",
-  "description": "Backend API for Radiance Academy",
+  "description": "Backend API for Masters Academy",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

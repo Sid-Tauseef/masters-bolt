@@ -74,7 +74,7 @@ const Achievements = () => {
               Celebrating excellence, recognizing success, and inspiring future achievements
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Over the years, Radiance Academy has been recognized for its outstanding contribution 
+              Over the years, Masters Academy has been recognized for its outstanding contribution 
               to education and the remarkable achievements of our students.
             </p>
           </motion.div>
@@ -345,7 +345,7 @@ const Achievements = () => {
               Be Part of Our Success Story
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Join Radiance Academy and become our next success story. Your achievement could be featured here!
+              Join Masters Academy and become our next success story. Your achievement could be featured here!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

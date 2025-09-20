@@ -73,7 +73,7 @@ const AdminLayout = () => {
               </div>
               <div>
                 <h1 className="text-lg font-bold text-gray-900">Admin Panel</h1>
-                <p className="text-xs text-gray-500">Radiance Academy</p>
+                <p className="text-xs text-gray-500">Masters Academy</p>
               </div>
             </Link>
             <button

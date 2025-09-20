@@ -54,7 +54,7 @@ app.use('/api/gallery', galleryRoutes);
 app.get('/api/health', (req, res) => {
   res.status(200).json({ 
     status: 'OK', 
-    message: 'Radiance Academy API is running',
+    message: 'Masters Academy API is running',
     timestamp: new Date().toISOString()
   });
 });

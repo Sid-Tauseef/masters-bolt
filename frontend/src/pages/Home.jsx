@@ -84,7 +84,7 @@ const Home = () => {
             >
               <img
                 src={homeData.about?.image || 'https://images.pexels.com/photos/5212700/pexels-photo-5212700.jpeg?auto=compress&cs=tinysrgb&w=800'}
-                alt="About Radiance Academy"
+                alt="About Masters Academy"
                 className="w-full h-96 object-cover rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -98,10 +98,10 @@ const Home = () => {
             >
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {homeData.about?.title || 'About Radiance Academy'}
+                  {homeData.about?.title || 'About Masters Academy'}
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  {homeData.about?.content || 'Radiance Academy has been a beacon of educational excellence for over a decade. We specialize in competitive exam preparation, academic support, and skill development programs that prepare students for success in their academic and professional journeys.'}
+                  {homeData.about?.content || 'Masters Academy has been a beacon of educational excellence for over a decade. We specialize in competitive exam preparation, academic support, and skill development programs that prepare students for success in their academic and professional journeys.'}
                 </p>
               </div>
 
@@ -388,7 +388,7 @@ const Home = () => {
               Ready to Start Your Journey?
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Join thousands of successful students who have achieved their dreams with Radiance Academy
+              Join thousands of successful students who have achieved their dreams with Masters Academy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

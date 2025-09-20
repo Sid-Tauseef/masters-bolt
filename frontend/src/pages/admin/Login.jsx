@@ -51,7 +51,7 @@ const Login = () => {
             <GraduationCap className="h-8 w-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Admin Panel</h1>
-          <p className="text-gray-600">Radiance Academy</p>
+          <p className="text-gray-600">Masters Academy</p>
         </div>
 
         {/* Login Form */}
@@ -155,7 +155,7 @@ const Login = () => {
         {/* Footer */}
         <div className="text-center mt-6">
           <p className="text-sm text-gray-500">
-            © 2024 Radiance Academy. All rights reserved.
+            © 2024 Masters Academy. All rights reserved.
           </p>
         </div>
       </motion.div>

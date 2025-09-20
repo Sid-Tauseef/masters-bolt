@@ -48,7 +48,7 @@ const About = () => {
     {
       year: '2008',
       title: 'Foundation',
-      description: 'Radiance Academy was established with a vision to transform education.'
+      description: 'Masters Academy was established with a vision to transform education.'
     },
     {
       year: '2012',
@@ -115,13 +115,13 @@ const About = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-gradient">Radiance Academy</span>
+              About <span className="text-gradient">Masters Academy</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
               Illuminating Minds, Shaping Futures Since 2008
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              For over 15 years, Radiance Academy has been at the forefront of educational excellence, 
+              For over 15 years, Masters Academy has been at the forefront of educational excellence, 
               transforming the lives of thousands of students through innovative teaching methodologies, 
               personalized attention, and unwavering commitment to success.
             </p>
@@ -244,7 +244,7 @@ const About = () => {
               Our Core Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do at Radiance Academy
+              The principles that guide everything we do at Masters Academy
             </p>
           </motion.div>
 
@@ -403,7 +403,7 @@ const About = () => {
               Join Our Legacy of Excellence
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Become part of the Radiance Academy family and embark on your journey to success
+              Become part of the Masters Academy family and embark on your journey to success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

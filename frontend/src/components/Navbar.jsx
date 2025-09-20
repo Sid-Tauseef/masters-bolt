@@ -50,7 +50,7 @@ const Navbar = () => {
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-display font-bold text-gray-900">
-                Radiance Academy
+                Masters Academy
               </h1>
               <p className="text-xs text-gray-600 hidden md:block">
                 Illuminating Minds, Shaping Futures

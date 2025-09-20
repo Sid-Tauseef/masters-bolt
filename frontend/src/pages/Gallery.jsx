@@ -44,7 +44,7 @@ const Gallery = () => {
     {
       icon: Camera,
       title: 'Capturing Moments',
-      description: 'Every picture tells a story of growth, achievement, and memorable experiences at Radiance Academy.'
+      description: 'Every picture tells a story of growth, achievement, and memorable experiences at Masters Academy.'
     },
     {
       icon: Image,
@@ -86,11 +86,11 @@ const Gallery = () => {
               Our <span className="text-gradient">Gallery</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8">
-              A visual journey through the vibrant life at Radiance Academy
+              A visual journey through the vibrant life at Masters Academy
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               Explore our collection of memorable moments, achievements, events, and the 
-              everyday life that makes Radiance Academy a special place for learning and growth.
+              everyday life that makes Masters Academy a special place for learning and growth.
             </p>
           </motion.div>
         </div>
@@ -212,7 +212,7 @@ const Gallery = () => {
               Explore Our Moments
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse through our collection of images showcasing the vibrant life at Radiance Academy
+              Browse through our collection of images showcasing the vibrant life at Masters Academy
             </p>
           </motion.div>
 
@@ -285,7 +285,7 @@ const Gallery = () => {
               Be Part of Our Story
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Join Radiance Academy and create your own memorable moments that could be featured in our gallery
+              Join Masters Academy and create your own memorable moments that could be featured in our gallery
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

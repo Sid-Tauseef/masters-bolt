@@ -1,4 +1,4 @@
-# 🚀 Local Setup Guide for Radiance Academy Website
+# 🚀 Local Setup Guide for Masters Academy Website
 
 ## Prerequisites
 

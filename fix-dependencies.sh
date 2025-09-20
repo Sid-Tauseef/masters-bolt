@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🔧 Fixing Radiance Academy Website Dependencies..."
+echo "🔧 Fixing Masters Academy Website Dependencies..."
 echo
 
 echo "📦 Installing root dependencies..."
