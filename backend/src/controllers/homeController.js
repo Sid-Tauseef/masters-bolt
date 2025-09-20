@@ -73,9 +73,58 @@ const createHomeSection = async (req, res) => {
     // Check if section already exists
     const existingSection = await Home.findOne({ section: req.body.section });
     if (existingSection) {
-      return res.status(400).json({
-        success: false,
-        message: 'Section already exists. Use update instead.'
+      // Update existing section instead of creating new one
+      const updateData = req.body;
+      
+      // Parse JSON fields from FormData
+      if (updateData.stats && typeof updateData.stats === 'string') {
+        try {
+          updateData.stats = JSON.parse(updateData.stats);
+        } catch (error) {
+          updateData.stats = [];
+        }
+      }
+      
+      if (updateData.testimonials && typeof updateData.testimonials === 'string') {
+        try {
+          updateData.testimonials = JSON.parse(updateData.testimonials);
+        } catch (error) {
+          updateData.testimonials = [];
+        }
+      }
+      
+      if (updateData.announcements && typeof updateData.announcements === 'string') {
+        try {
+          updateData.announcements = JSON.parse(updateData.announcements);
+        } catch (error) {
+          updateData.announcements = [];
+        }
+      }
+
+      // Handle image upload
+      if (req.file) {
+        // Delete old image from Cloudinary
+        if (existingSection.image) {
+          try {
+            const publicId = extractPublicId(existingSection.image);
+            await deleteImage(publicId);
+          } catch (error) {
+            console.error('Error deleting old image:', error);
+          }
+        }
+        updateData.image = req.file.path;
+      }
+
+      const updatedSection = await Home.findOneAndUpdate(
+        { section: req.body.section },
+        updateData,
+        { new: true, runValidators: true }
+      );
+
+      return res.json({
+        success: true,
+        message: 'Home section updated successfully',
+        data: updatedSection
       });
     }
 

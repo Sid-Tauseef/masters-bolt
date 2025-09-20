@@ -84,8 +84,10 @@ const HomeContent = () => {
           const [label, value, icon] = stat.split('|').map(s => s.trim())
           return { label, value, icon: icon || 'users' }
         })
-        data.stats = stats
+        formData.append('stats', JSON.stringify(stats))
         delete data.statsData
+      } else {
+        formData.append('stats', JSON.stringify([]))
       }
 
       if (data.section === 'testimonials' && data.testimonialsData) {
@@ -99,8 +101,10 @@ const HomeContent = () => {
             rating: 5
           }
         })
-        data.testimonials = testimonials
+        formData.append('testimonials', JSON.stringify(testimonials))
         delete data.testimonialsData
+      } else {
+        formData.append('testimonials', JSON.stringify([]))
       }
 
       if (data.section === 'announcements' && data.announcementsData) {
@@ -114,15 +118,15 @@ const HomeContent = () => {
             isActive: true
           }
         })
-        data.announcements = announcements
+        formData.append('announcements', JSON.stringify(announcements))
         delete data.announcementsData
+      } else {
+        formData.append('announcements', JSON.stringify([]))
       }
 
-      // Append all form fields
+      // Append remaining form fields
       Object.keys(data).forEach(key => {
-        if (key === 'stats' || key === 'testimonials' || key === 'announcements') {
-          formData.append(key, JSON.stringify(data[key]))
-        } else if (key !== 'image') {
+        if (key !== 'image' && key !== 'statsData' && key !== 'testimonialsData' && key !== 'announcementsData') {
           formData.append(key, data[key])
         }
       })

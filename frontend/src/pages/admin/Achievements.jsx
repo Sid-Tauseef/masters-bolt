@@ -72,7 +72,11 @@ const Achievements = () => {
       Object.keys(data).forEach(key => {
         if (key === 'relatedStudents') {
           // Handle related students array
-          const students = data[key] ? data[key].split('\n').filter(s => s.trim()).map(s => ({ name: s.trim() })) : []
+          const students = data[key] ? data[key].split('\n').filter(s => s.trim()).map(s => ({ 
+            name: s.trim(),
+            class: '',
+            achievement: ''
+          })) : []
           formData.append(key, JSON.stringify(students))
         } else if (key !== 'image') {
           formData.append(key, data[key])

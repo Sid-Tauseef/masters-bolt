@@ -124,7 +124,7 @@ const Courses = () => {
     // Populate form with course data
     Object.keys(course).forEach(key => {
       if (key === 'features') {
-        setValue(key, course[key] || [])
+        setValue(key, course[key]?.join(', ') || '')
       } else if (key === 'instructor') {
         setValue('instructor.name', course.instructor?.name || '')
         setValue('instructor.qualification', course.instructor?.qualification || '')

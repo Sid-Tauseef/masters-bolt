@@ -39,13 +39,6 @@ const courseSchema = new mongoose.Schema({
     type: String,
     trim: true
   }],
-  syllabus: [{
-    topic: {
-      type: String,
-      required: true
-    },
-    subtopics: [String]
-  }],
   price: {
     type: Number,
     required: [true, 'Course price is required'],

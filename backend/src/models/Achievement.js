@@ -31,8 +31,14 @@ const achievementSchema = new mongoose.Schema({
   },
   relatedStudents: [{
     name: String,
-    class: String,
-    achievement: String
+    class: {
+      type: String,
+      default: ''
+    },
+    achievement: {
+      type: String,
+      default: ''
+    }
   }],
   isActive: {
     type: Boolean,
